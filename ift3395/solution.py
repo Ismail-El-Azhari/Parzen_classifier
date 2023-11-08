@@ -29,7 +29,7 @@ class Q1:
         condition_5 = wineQuality[:,-1]==5
         return self.covariance_matrix(wineQuality[condition_5])
 
-
+#This method is not generalized and works on numeric classes only!
 # class HardParzen:
 #     def __init__(self, h):
 #         self.h = h
@@ -64,7 +64,7 @@ class Q1:
 #             classes_pred[i] = np.argmax(counts_matrix[i,:]) + offset_index  
 #         return classes_pred
     
-#Second try with indexes that can be anything
+#This method works with indexes so the classes can be anything (numerci or otherwise)
 class HardParzen:
     def __init__(self, h):
         self.h = h
